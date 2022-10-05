@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get("/apartments", [\App\Http\Controllers\ApartmentController::class, "all"]);
+
+Route::post("/upload", [\App\Http\Controllers\FileController::class, "import"]);
+Route::post("/search", [\App\Http\Controllers\ApartmentController::class, "search"]);
