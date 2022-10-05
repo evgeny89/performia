@@ -8,4 +8,6 @@ npm install
 sail up
 
 sail artisan migrate
+
+npm run dev
 ```
